@@ -1,15 +1,12 @@
 """
-Some black magic for better scatterplots.
-
-Taken and adapted from:
-https://stackoverflow.com/questions/59373626/matplotlib-scatter-different-images-mnist-instead-of-plots-for-tsne
+Data and plotting utilities.
 """
 import numpy as np
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 from matplotlib.axes import Axes
 
 
-def load_dataset() -> np.ndarray:
+def load_dataset(only_one: bool = True) -> np.ndarray:
     """
     Returns the images depicting digit 1
     of the MNIST dataset.
@@ -22,15 +19,23 @@ def load_dataset() -> np.ndarray:
     digits = arr["x_train"]
     classes = arr["y_train"]
 
-    imgs_of_1 = digits[classes == 1]
+    if only_one:
+        data = digits[classes == 1]
+    else:
+        data = digits
 
-    return imgs_of_1
+    return data
 
 
 def plot_images(z: np.ndarray, images: np.ndarray, ax: Axes):
     """
     A function that plots all images in {images}
     at coordinates {z}.
+
+    Some black magic for better scatterplots.
+
+    Taken and adapted from:
+    https://stackoverflow.com/questions/59373626/matplotlib-scatter-different-images-mnist-instead-of-plots-for-tsne
     """
     for zi, img in zip(z, images):
         im = OffsetImage(img, zoom=0.5)

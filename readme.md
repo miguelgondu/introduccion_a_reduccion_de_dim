@@ -21,3 +21,8 @@ En `utils.py` puedes encontrar una función `load_dataset() -> np.ndarray` que c
 - El blog de Marian: https://marian42.de/
 - El paper de Isomap: https://wearables.cc.gatech.edu/paper_of_week/isomap.pdf
 - La base de datos usada en el código: MNIST, downloaded using Keras from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+
+## Más recursos sobre reducción de la dimensionalidad
+- Charla de Leland McInnes sobre R.D. https://youtu.be/9iol3Lk6kyU
+- Capítulo 10 de Mathematics for Machine Learning. https://mml-book.github.io/book/mml-book.pdf
+- Capítulo 12 del Bishop. https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/
