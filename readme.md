@@ -2,7 +2,7 @@
 
 Este repositorio contiene el código de la pequeña introducción a la reducción de la dimensionalidad, usado en una presentación para *Manizales codes in Python* que puedes ver [aquí]().
 
-Una versión en PDF de las diapositivas se puede encontrar en este repositorio también.
+Una versión en PDF de las diapositivas se puede encontrar en este repositorio también bajo `slides.pdf`.
 
 ## Prerequisitos
 
